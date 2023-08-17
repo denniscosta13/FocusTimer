@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estilo Pomodoro">
+  <title>FocusTimer - Pomodoro</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+</head>
+<body>
+  <div id="app">
+    <div class="timer-wrapper">
+      <section id="timer" class="flex">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        
+        
+      </section>
+      <div id="controls" class="flex controls">
+        <button class="ph ph-play" data-action="toggleRunning"></button>
+        <button class="ph ph-pause" data-action="toggleRunning"></button>
+        <button class="ph ph-stop" data-action="reset"></button>
+        <button class="ph ph-plus" data-action="moreMinutes"></button>
+        <button class="ph ph-minus" data-action="lessMinutes"></button>
+      </div>
+    </div>
+    <div id="sound-controls" class="sounds-wrapper controls">
+      <button class="ph ph-tree" data-action="toggleMusicNature" id="nature" data-sound="nature"></button>
+      <button class="ph ph-cloud-rain" data-action="toggleMusicRain" id="rain" data-sound="rain"></button>
+      <button class="ph ph-storefront" data-action="toggleMusicCoffee" id="coffeeshop" data-sound="coffeeshop"></button>
+      <button class="ph ph-fire" data-action="toggleMusicFire" id="fireplace" data-sound="fireplace"></button>
+    </div>
+
+
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
