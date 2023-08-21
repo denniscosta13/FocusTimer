@@ -35,5 +35,6 @@ export function countDown() {
 
   updateDisplay(minutes,seconds)
 
-  setTimeout(() => countDown(), 1000)
+  // setTimeout(() => countDown(), 1000)
+  countDown()
 }
