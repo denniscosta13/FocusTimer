@@ -6,8 +6,8 @@ import { getButtonName } from './events.js'
 
 export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle('running')
-  setInterval(timer.countDown,1000)
-  // timer.countDown()
+  
+  timer.countDown()
 }
 
 export function reset() {
