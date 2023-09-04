@@ -13,6 +13,8 @@ export function updateDisplay(minutes,seconds) {
 
 export function countDown() {
 
+  clearTimeout(state.countdownId)
+
 // se o isRunning for falso, entra no return e para o countDown, caso seja verdadeiro continua o countDown
   if(!state.isRunning) return 
 
@@ -35,5 +37,5 @@ export function countDown() {
 
   updateDisplay(minutes,seconds)
 
-  setTimeout(() => countDown(), 1000)
+  state.countdownId = setTimeout(() => countDown(), 1000)
 }
